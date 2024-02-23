@@ -1,0 +1,24 @@
+{
+  "name": "linemapsweb",
+  "version": "1.0.0",
+  "description": "nn",
+  "main": "index.js",
+  "scripts": {
+    "test": "ss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "yes"
+  },
+  "keywords": [
+    "penis"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "glob-parent": "^5.1.2"
+  }
+}
