@@ -1,13 +1,10 @@
-
 .container{
     max-width: 1250px;
     margin: 0 auto;
 }
 body{
     margin: 0;
-    background: rgb(210,211,213);
-    background: linear-gradient(91deg, rgb(219, 219, 219) 0%, rgb(201, 201, 201) 50%, rgb(219, 219, 219) 100%);
-    
+    background: #181B25;
 }
 
 *{
@@ -21,3 +18,5 @@ ul{
 a{
     text-decoration: none;
 }
+
+@import 'base/start';
