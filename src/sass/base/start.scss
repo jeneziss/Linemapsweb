@@ -1,6 +1,51 @@
 .start{
+    margin: 0 auto;
     &_bg{
         position: absolute;
         width: 100%;
+        top: 0px;
+    }
+}
+.header{
+    max-width: 85%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+    
+    nav{
+        ul{
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            li{
+                margin: 10px;
+                a{
+                    color: #fff;
+                    font-size: 18px;
+                    &:hover{
+                        color: #FFD700;
+                    }
+                }
+            }
+        }
+    }
+    &__items{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 15px;
+        &_logo{
+            a{
+                img{
+                    width: 85px;
+                }
+            }
+        }
     }
 }
