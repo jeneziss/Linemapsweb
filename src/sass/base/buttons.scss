@@ -1,0 +1,35 @@
+.log-in{
+    &_btn{
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-family: monospace;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        background-color: #2F3443;
+        color: aliceblue;
+        &:hover{
+            background-color: #535285;
+        }
+    }
+}
+.sign-up{
+    &_btn{
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-family: monospace;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        background-color: #535285;
+        color: aliceblue;
+        &:hover{
+            background-color: #6C83FF;
+            color: #fff;
+        }   
+    }
+}

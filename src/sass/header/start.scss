@@ -7,8 +7,9 @@
     }
 }
 .header{
-    max-width: 85%;
+    max-width: 75%;
     margin: 0 auto;
+    margin-top: 20px;
     position: relative;
     z-index: 1;
     .container{
@@ -22,15 +23,19 @@
         ul{
             display: flex;
             flex-direction: row;
+            align-items: center;
             padding: 0;
             li{
                 margin: 10px;
                 a{
-                    color: #fff;
+                    color: #C8C7D8;
                     font-size: 18px;
+                    font-family: monospace;
+                    font-weight: 500;
                     &:hover{
-                        color: #FFD700;
+                        color: #6C83FF;
                     }
+                    
                 }
             }
         }
@@ -49,3 +54,4 @@
         }
     }
 }
+
