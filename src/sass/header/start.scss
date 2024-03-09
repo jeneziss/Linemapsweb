@@ -4,6 +4,7 @@
         position: absolute;
         width: 100%;
         top: 0px;
+        z-index: -1;
     }
 }
 .header{
@@ -11,7 +12,6 @@
     margin: 0 auto;
     margin-top: 20px;
     position: relative;
-    z-index: 1;
     .container{
         display: flex;
         justify-content: center;
@@ -46,12 +46,22 @@
         justify-content: space-between;
         margin: 0 15px;
         &_logo{
+            &:hover{
+                cursor: pointer;
+
+            }
             a{
                 img{
-                    width: 85px;
-                }
+                    width: 75px;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        cursor: pointer;
+                        width: 80px;
+                        transition: all 0.3s ease;
+                            }
+                    }
+                    
             }
+                }
         }
     }
-}
-

@@ -33,3 +33,26 @@
         }   
     }
 }
+
+.promo-btn{
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #535285;
+    color: aliceblue;
+    &:hover{
+        background-color: #6C83FF;
+        color: #fff;
+        transform: scale(1.05);
+
+    }   
+    &:visited{
+        color: #fff;
+    }
+}

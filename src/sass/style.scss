@@ -1,5 +1,8 @@
 .container{
-    max-width: 85%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
     margin: 0 auto;
 }
 body{
@@ -22,3 +25,4 @@ a{
 @import 'base/buttons';
 @import 'base/fonts';
 @import 'header/start';
+@import 'header/promo.scss';
