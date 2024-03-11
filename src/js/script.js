@@ -1,36 +1,31 @@
 // Hamburger //
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.header__items'),
-    menuItem = document.querySelectorAll('.header__items_nav'),
-    hamburger = document.querySelector('.hamburger'),
-    header = document.querySelector('.header');
-    fixed = document.querySelector('.promo__fixed');
-    fixedImg = document.querySelector('.promo__fixed_img');
-    fixedText = document.querySelector('.promo__fixed_text');
+        menuItems = document.querySelectorAll('.header__items_nav'),
+        header = document.querySelector('.header'),
+        hamburger = document.querySelector('.hamburger'),
+        body = document.querySelector('body');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('hamburger__active');
-        menu.classList.toggle('header__items_active');
+    function toggleMenu() {
+        hamburger.classList.toggle('hamburger_active');
         header.classList.toggle('header__active');
-        fixed.classList.toggle('promo__fixed_active');
-        fixedImg.classList.toggle('promo__fixed_img_active');
-        fixedText.classList.toggle('promo__fixed_text_active');
-    });
+        menu.classList.toggle('header__items_active');
+        if (hamburger.classList.contains('hamburger_active')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = 'auto';
+        }
+    }
 
-    menuItem.forEach(item => {
-        item.addEventListener('click', () => {
-            hamburger.classList.toggle('hamburger__active');
-            menu.classList.toggle('header__items_active');
-            header.classList.toggle('header__active');
-            fixed.classList.toggle('promo__fixed_active');
-            fixedImg.classList.toggle('promo__fixed_img_active');
-            fixedText.classList.toggle('promo__fixed_text_active');
-        })
+    hamburger.addEventListener('click', toggleMenu);
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', toggleMenu);
     })
 });
 
 
-// Modal // 
+// Modal //
 
 
 
