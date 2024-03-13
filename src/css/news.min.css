@@ -1,0 +1,1 @@
+.news__btns{display:flex;align-items:center;justify-content:center;flex-direction:row}.slide{display:none;transition:transform .5s ease;transition:all 1s ease;opacity:0;visibility:hidden}.slide.show{display:block;opacity:1;visibility:visible}
