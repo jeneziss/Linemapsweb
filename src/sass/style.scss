@@ -5,6 +5,13 @@
     max-width: 80%;
     margin: 0 auto;
 }
+
+@media(max-width: 800px){
+    .container{
+        max-width: 90%;
+
+    }
+}
 body{
     margin: 0;
     background: #181B25;
@@ -26,8 +33,9 @@ a{
 
 @import 'base/buttons';
 @import 'base/fonts';
+@import 'header/menu.scss';
 @import 'header/start';
 @import 'header/promo.scss';
+@import 'pages/news';
 @import 'base/maps.scss';
-@import 'header/menu.scss';
-@import 'news.scss';
+

@@ -18,3 +18,28 @@
         max-width: 73%;
     }
 }
+
+@media(max-width: 950px){
+    .promo{
+        &__content{
+            max-width: 90%;
+        }
+        h1{
+            font-size: 5vw;
+        }
+        p{
+            font-size: 2vw;
+        }
+    }
+}
+
+@media(max-width: 650px){
+    .promo{
+        h1{
+            font-size: 6vw;
+        }
+        p{
+            font-size: 3vw;
+        }
+    }
+}
