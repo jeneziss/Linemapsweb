@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+jQuery(document).ready(function(SmoothScroll){
         jQuery('a[href^="#"]').bind('click.smoothscroll',function (e) {
             e.preventDefault();
             var target = this.hash,

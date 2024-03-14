@@ -1,73 +1,57 @@
-.space-mono-regular {
-    font-family: "Space Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .space-mono-bold {
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .space-mono-regular-italic {
-    font-family: "Space Mono", monospace;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .space-mono-bold-italic {
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
-    font-style: italic;
+@mixin font-style($family, $weight, $style) {
+  font-family: $family;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+.space-mono {
+  &-regular {
+    @include font-style("Space Mono", 400, normal);
   }
 
-  
-  .ubuntu-light {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+  &-bold {
+    @include font-style("Space Mono", 700, normal);
   }
-  
-  .ubuntu-regular {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+
+  &-regular-italic {
+    @include font-style("Space Mono", 400, italic);
   }
-  
-  .ubuntu-medium {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+
+  &-bold-italic {
+    @include font-style("Space Mono", 700, italic);
   }
-  
-  .ubuntu-bold {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+}
+
+.ubuntu {
+  &-light {
+    @include font-style("Ubuntu", 300, normal);
   }
-  
-  .ubuntu-light-italic {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 300;
-    font-style: italic;
+
+  &-regular {
+    @include font-style("Ubuntu", 400, normal);
   }
-  
-  .ubuntu-regular-italic {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: italic;
+
+  &-medium {
+    @include font-style("Ubuntu", 500, normal);
   }
-  
-  .ubuntu-medium-italic {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 500;
-    font-style: italic;
+
+  &-bold {
+    @include font-style("Ubuntu", 700, normal);
   }
-  
-  .ubuntu-bold-italic {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    font-style: italic;
+
+  &-light-italic {
+    @include font-style("Ubuntu", 300, italic);
   }
-  
+
+  &-regular-italic {
+    @include font-style("Ubuntu", 400, italic);
+  }
+
+  &-medium-italic {
+    @include font-style("Ubuntu", 500, italic);
+  }
+
+  &-bold-italic {
+    @include font-style("Ubuntu", 700, italic);
+  }
+}

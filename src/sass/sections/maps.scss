@@ -1,14 +1,14 @@
 .maps{
-    padding-top: 20px;
-    &_chooser{
+    margin-top: 20px;
+    margin-bottom: 20px;
 
-    }
 
     &_boxes{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        margin-bottom: 20px;
         &__box{
             width: 335px;
             height: 305px;
@@ -17,12 +17,12 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             display: flex;
             flex-direction: column;
-            transition: all 0.3s ease;
             margin: 15px;
             
 
             &:hover{
-                transform: scale(1.05);
+                transition: 0.3s ease!important;
+                transform: scale(1.05)!important;
             }
             h1{ // title
                 font-size: 1.5rem;
@@ -61,4 +61,8 @@
             }
         }
     }
+}
+
+.container{
+    flex-direction: column;
 }

@@ -9,7 +9,6 @@
 @media(max-width: 800px){
     .container{
         max-width: 90%;
-
     }
 }
 body{
@@ -33,9 +32,11 @@ a{
 
 @import 'base/buttons';
 @import 'base/fonts';
-@import 'header/menu.scss';
-@import 'header/start';
-@import 'header/promo.scss';
-@import 'pages/news';
-@import 'base/maps.scss';
+@import 'sections/header';
+@import 'sections/promo';
+@import 'sections/news';
+@import 'sections/maps';
+@import 'sections/footer';
+@import 'base/adaptive';
+
 

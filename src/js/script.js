@@ -16,9 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
             body.style.overflow = 'auto';
         }
     }
-
     hamburger.addEventListener('click', toggleMenu);
-
     menuItems.forEach(item => {
         item.addEventListener('click', toggleMenu);
     })
@@ -31,11 +29,9 @@ let slideIndex = 1;
 document.addEventListener("DOMContentLoaded", function() {
     showSlides(slideIndex);
 });
-
 function changeSlide(n) {
     showSlides(slideIndex += n);
 }
-
 function showSlides(n) {
     let slides = document.getElementsByClassName("slide");
 
@@ -54,10 +50,9 @@ function showSlides(n) {
         slides[slideIndex - 1].classList.add('show');
     }
 }
+
+
 // Modal //
-
-
-
 $('[data-modal=consultation]').on('click', function(){
     $('.overlay, #consultation').fadeIn();
 });
@@ -66,7 +61,7 @@ $('.modal__close').on('click', function(){
 });
 
 
-
+// TG bot sender //
 $('form').submit(function(e) {
     e.preventDefault();
     $.ajax({
@@ -81,4 +76,5 @@ $('form').submit(function(e) {
     return false;
 });
 
+// for inputs //
 $('input[name=user_phone]').mask("+38 (999) 999-99-99");
