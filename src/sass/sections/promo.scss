@@ -3,19 +3,30 @@
     padding: 20px 0;
     text-align: center;
     h1{
-        font-size: 4vw;
+        font-size: 4.3em;
         margin-bottom: 20px;
         font-family: monospace;
         font-weight: 700;
     }
     p{
-        font-size: 1.5vw;
+        font-size: 1.7em;
         margin-bottom: 20px;
         color: #C8C7D8;
         font-family: monospace;
     }
+    &__title{
+        h1{
+            margin-bottom: 0;
+        }
+    }
+    &__descr{
+        max-width: 70%;
+    }
     &__content{
-        max-width: 72%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 90%;
     }
 }
 

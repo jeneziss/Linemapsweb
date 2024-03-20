@@ -1,4 +1,73 @@
-@media(max-width: 600px) {
+@media(max-width: 950px){
+  .promo{
+    &__content{
+      max-width: 90%;
+    }
+    h1{
+      font-size: 6vw;
+      margin-top: 10px;
+    }
+    p{
+      font-size: 2.5vw;
+    }
+    &__descr{
+      max-width: 90%;
+    }
+  }
+  .header nav ul li a {
+    color: #c8c7d8;
+    font-size: 2.3vw;
+  }
+  .header{
+    &__items{
+      flex-direction: column;
+    }
+  }
+
+  .header{
+    nav{
+      ul{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .maps_boxes__box {
+    width: 310px;
+    height: 290px;
+
+  }
+  .maps_boxes__box_img img {
+    max-width: 310px;
+  }
+} // eng of section 950px
+
+@media(max-width: 750px){
+
+  .header{
+    nav{
+      ul{
+        margin-bottom: 0;
+        li{
+          a{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+} // end of 750px
+
+@media(max-width: 660px) {
+  .promo{
+    h1{
+      font-size: 6vw;
+    }
+    p{
+      font-size: 3vw;
+    }
+  }
   .hamburger {
     position: relative;
     z-index: 999;
@@ -82,29 +151,22 @@
     top: 0;
   }
 
-}
-
-@media(max-width: 950px){
-  .promo{
-    &__content{
-      max-width: 90%;
-    }
-    h1{
-      font-size: 5vw;
-    }
-    p{
-      font-size: 2vw;
-    }
+  .maps_boxes__box h1 {
+    font-size: 1.4rem;
   }
-}
+} // eng of 660px
 
-@media(max-width: 650px){
-  .promo{
-    h1{
-      font-size: 6vw;
-    }
-    p{
-      font-size: 3vw;
-    }
+
+@media(max-width: 500px){
+
+  .maps_boxes__box {
+    width: 290px;
+    height: 270px;
+
   }
+  .maps_boxes__box_img img {
+    max-width: 290px;
+  }
+
+
 }
