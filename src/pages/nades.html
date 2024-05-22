@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Game Map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #map-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #333;
+        }
+        #map {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #map img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .marker {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background-size: cover;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+        }
+        .popup {
+            display: none;
+            position: absolute;
+            width: 320px;
+            height: 240px;
+            background: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            z-index: 1000;
+            transform: translate(-50%, -50%);
+        }
+        .popup iframe {
+            width: 100%;
+            height: 100%;
+        }
+        .popup .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            background: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="map-container">
+        <div id="map">
+            <img src="https://www.hltv.org/img/static/stats/heatmap/new/de_dust2_radar_trans.png" alt="Dust2 Radar" id="map-image">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Инициализация Panzoom для масштабирования и перетаскивания карты
+            const mapElement = document.getElementById('map');
+            const panzoom = Panzoom(mapElement, {
+                maxScale: 3
+            });
+            mapElement.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
+
+            // Данные маркеров
+            const markers = [
+                { left: '200px', top: '200px', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', imgSrc: 'https://via.placeholder.com/32' },
+                { left: '300px', top: '300px', videoUrl: 'https://www.youtube.com/embed/3JZ_D3ELwOQ', imgSrc: 'https://via.placeholder.com/32' }
+            ];
+
+            markers.forEach(markerData => {
+                // Создание маркера
+                const marker = document.createElement('div');
+                marker.className = 'marker';
+                marker.style.left = markerData.left;
+                marker.style.top = markerData.top;
+                marker.style.backgroundImage = `url(${markerData.imgSrc})`;
+
+                // Создание попапа с видео
+                const popup = document.createElement('div');
+                popup.className = 'popup';
+                popup.innerHTML = `
+                    <iframe src="${markerData.videoUrl}" frameborder="0" allowfullscreen></iframe>
+                    <button class="close-btn">&times;</button>
+                `;
+
+                // Добавление функционала для маркера
+                marker.addEventListener('click', () => {
+                    popup.style.display = 'block';
+                });
+
+                // Добавление функционала для закрытия попапа
+                popup.querySelector('.close-btn').addEventListener('click', () => {
+                    popup.style.display = 'none';
+                });
+
+                // Добавление элементов на карту
+                mapElement.appendChild(marker);
+                mapElement.appendChild(popup);
+
+                // Позиционирование попапа
+                popup.style.left = markerData.left;
+                popup.style.top = markerData.top;
+            });
+
+            // Закрытие всех попапов при клике вне их области
+            document.addEventListener('click', event => {
+                if (!event.target.closest('.marker') && !event.target.closest('.popup')) {
+                    document.querySelectorAll('.popup').forEach(popup => {
+                        popup.style.display = 'none';
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
